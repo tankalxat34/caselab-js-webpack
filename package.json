@@ -1,0 +1,20 @@
+{
+  "name": "caselab-js-webpack",
+  "version": "1.0.0",
+  "description": "ДЗ 6 - TS & React & Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tankalxat34/caselab-js-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tankalxat34/caselab-js-webpack/issues"
+  },
+  "homepage": "https://github.com/tankalxat34/caselab-js-webpack#readme"
+}
