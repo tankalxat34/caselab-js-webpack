@@ -14,6 +14,7 @@ const App = (): JSX.Element => {
             <pre>{process.env.BASE_URL}</pre>
             <img src={logo1} alt="" width="400px" />
             <img src={logo2} alt="" width="900px" />
+            <p>wefwef</p>
         </>
     )
 }
