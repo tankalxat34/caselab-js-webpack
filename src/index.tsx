@@ -1,7 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 
+// @ts-ignore
 if (module.hot) {
+    // @ts-ignore
     module.hot.accept();
 }
 

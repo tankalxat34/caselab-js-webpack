@@ -1,14 +1,11 @@
-const path = require('path')
-const webpack = require("webpack")
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-        alias: {
-            "@images": path.resolve(__dirname, "../src/images")
-        },
-        modules: [path.resolve(__dirname, '../src'), 'node_modules'],
+        modules: [path.resolve(__dirname, '../public'), 'node_modules'],
     },
     module: {
         rules: [
@@ -23,29 +20,33 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset/resource'
+                type: 'asset/resource',
             },
             {
-                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
                 type: 'asset/inline',
             },
         ],
     },
     output: {
         path: path.resolve(__dirname, '..', './build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '..', './src/index.html'),
+            template: path.resolve(__dirname, '..', './public/index.html'),
         })
     ],
     devServer: {
+        static: {
+            directory: path.resolve(__dirname, '..', './public'),
+        },
         compress: true,
         hot: true
-    }
-}
+    },
+};

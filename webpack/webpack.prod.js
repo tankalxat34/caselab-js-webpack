@@ -1,3 +1,4 @@
+const DotenvWebpackPlugin = require('dotenv-webpack')
 const webpack = require('webpack')
 module.exports = {
     mode: 'production',
@@ -5,6 +6,8 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.BASE_URL': JSON.stringify('http://example.com')
-        })
+        }),
+        new DotenvWebpackPlugin({path: ".env.prod"})
+
     ]
 }
