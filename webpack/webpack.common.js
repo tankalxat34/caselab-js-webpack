@@ -5,6 +5,10 @@ module.exports = {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            "@images": path.resolve(__dirname, "../src/images")
+        },
+        modules: [path.resolve(__dirname, '../src'), 'node_modules'],
     },
     module: {
         rules: [

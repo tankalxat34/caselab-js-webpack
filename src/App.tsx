@@ -1,7 +1,13 @@
 import React from 'react';
 import "./styles.css";
-import logo1 from "./images/logo.svg";
-import logo2 from "./images/logo.png";
+// import logo1 from "./images/logo.svg";
+// import logo2 from "./images/logo.png";
+
+// import logo1 from "@images/logo.svg";
+// import logo2 from "@images/logo.png";
+
+import logo1 from "images/logo.svg";
+import logo2 from "images/logo.png";
 
 const App = (): JSX.Element => {
     return (
@@ -14,7 +20,7 @@ const App = (): JSX.Element => {
             <pre>{process.env.BASE_URL}</pre>
             <img src={logo1} alt="" width="400px" />
             <img src={logo2} alt="" width="900px" />
-            <p>wefwef</p>
+            <p>wefwef!</p>
         </>
     )
 }
